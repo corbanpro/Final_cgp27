@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+
+@model Entertainers
+
+<h1>Entertainer Details</h1>
+
+<form asp-action="AddEntertainer" method="post">
+    <div class="row">
+        <div class="col-2">
+            ID
+        </div>
+        <div class="col">
+            @Model.EntertainerId
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-2">
+            Stage Name
+        </div>
+        <div class="col">
+            @Model.EntStageName
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            SSN
+        </div>
+        <div class="col">
+            @Model.EntSsn
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            Street Address
+        </div>
+        <div class="col">
+            @Model.EntStreetAddress
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            City Name
+        </div>
+        <div class="col">
+            @Model.EntCity
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            EntState">State Name
+        </div>
+        <div class="col">
+            @Model.EntState
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            Zip Code
+        </div>
+        <div class="col">
+            @Model.EntZipCode
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            Phone Number
+        </div>
+        <div class="col">
+            @Model.EntPhoneNumber
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            Web Page
+        </div>
+        <div class="col">
+            @Model.EntWebPage
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            Email Address
+        </div>
+        <div class="col">
+            @Model.EntEmailAddress
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            Date Entered
+        </div>
+        <div class="col">
+            @Model.DateEntered
+        </div>
+    </div>
+</form>
+
+<br />
+
+<a class="btn btn-primary" asp-action="EditEntertainer" asp-route-entertainerId="@Model.EntertainerId">Edit</a>
+<a class="btn btn-primary" asp-action="DeleteEntertainer" asp-route-entertainerId="@Model.EntertainerId">Delete</a>
+

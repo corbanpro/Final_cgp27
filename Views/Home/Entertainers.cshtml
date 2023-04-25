@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Entertainers";
+}
+
+@model EntertainersView
+
+<h1>Entertainers</h1>
+<div class="row">
+    @foreach (Entertainers e in Model.EntertainersList)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card m-1">
+                <div class="card-header">
+                    <h4 class="card-title m-0">@e.EntStageName</h4>
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-primary" asp-action="Details" asp-route-entertainerId="@e.EntertainerId">Details</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<a class="btn btn-primary" asp-action="AddEntertainer">Add Entertainer</a>
+

@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+}
+
+@model Entertainers
+
+<h1>Add Entertainer</h1>
+
+<form asp-action="EditEntertainer" method="post">
+
+    <input type="hidden" asp-for="EntertainerId" value="@Model.EntertainerId"/>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="EntStageName">Stage Name</label>
+        </div>
+        <div class="col">
+            <input value="@Model.EntStageName" asp-for="EntStageName" type="text" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="EntSsn">SSN</label>
+        </div>
+        <div class="col">
+            <input value="@Model.EntSsn" asp-for="EntSsn" type="text" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="EntStreetAddress">Street Address</label>
+        </div>
+        <div class="col">
+            <input value="@Model.EntStreetAddress" asp-for="EntStreetAddress" type="text" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="EntCity">City Name</label>
+        </div>
+        <div class="col">
+            <input value="@Model.EntCity" asp-for="EntCity" type="text" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="EntState">State Name</label>
+        </div>
+        <div class="col">
+            <input value="@Model.EntState" asp-for="EntState" type="text" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="EntZipCode">Zip Code</label>
+        </div>
+        <div class="col">
+            <input value="@Model.EntZipCode" asp-for="EntZipCode" type="text" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="EntPhoneNumber">Phone Number</label>
+        </div>
+        <div class="col">
+            <input value="@Model.EntPhoneNumber" asp-for="EntPhoneNumber" type="text" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="EntWebPage">Web Page</label>
+        </div>
+        <div class="col">
+            <input value="@Model.EntWebPage" asp-for="EntWebPage" type="text" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="EntEmailAddress">Email Address</label>
+        </div>
+        <div class="col">
+            <input value="@Model.EntEmailAddress" asp-for="EntEmailAddress" type="text" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="DateEntered">Date Entered</label>
+        </div>
+        <div class="col">
+            <input value="@Model.DateEntered" asp-for="DateEntered" type="text" />
+        </div>
+    </div>
+
+    <br />
+    <input type="submit" class="btn btn-primary" value="Submit"/>
+</form>
